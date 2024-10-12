@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page title</title>
+    <style>
+        body{
+            margin:0;
+            padding:0;
+            font-family: Arial, sans-serif;
+background-image:linear-gradient(to bottom, #3a3d41, #222);
+            background-attachment: fixed;
+            }
+            .bar-container{
+         position: fixed ;
+         cursor: pointer;
+         left:5px ;
+         top:8px;
+         bottom:0px;
+         color: ;
+         Z-index: 3;
+       
+        }
+        .bar1, .bar2, .bar3{
+            width:30px;
+            height:3px;
+            background: white;
+            margin: 6px ;
+            margin-bottom: 2px;
+            transition: 0.4s;
+            padding : ;
+            color: white;
+            position: ;
+        }
+        .change .bar1{
+            transform: translate(0, 11px) rotate(-45deg);
+        }
+        .change .bar2{
+        opacity: 0;
+        }
+        .change .bar3{
+            transform: translate(0, -11px)
+             rotate(45deg);
+             }
+            .sidenav{
+                display: ;
+                position: fixed;
+                top: 0;
+                left:0;
+                width:200px;
+                height: 100vh;
+                background:white;
+                color:#fff;
+                padding: 0;
+                transform: translateX(-250px);
+                transition: 0.5s;
+                z-index:1;
+            }
+            .sidenav.show{
+                transform: TranslateX(0)
+            }
+            .main-content{
+                transition: 0.5s;
+            }
+            .change ~ .main-content{
+            margin-left: 250px;
+            }
+            .overlay{
+            position: fixed;
+            top:0;
+            left:0;
+            width: 100%;
+            height: 100vh;
+            background:rgb(0,0,0,0.5);
+            display: none;
+            }
+            .show-overlay{
+               display: block;
+            }
+            ul{
+            margin-top: 100px;    
+            }
+            ul a{
+                list-style: none;
+                text-decoration: none;
+            }
+            .header-section{
+            display: flex;
+            justify-content:space-between;  
+  background-image:linear-gradient(to bottom, #3a3d41, #222);
+                padding-top: 10px;
+                align-item: center;
+                margin-bottom: px;
+                height: 15vh;
+                position: fixed;
+                width:100%;
+                }
+            
+        
+        #video{
+      border-radius: 20% ;
+      box-shadow: 0 0 70px rgba(255,255,255,1);
+            
+        }
+        center{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height:;
+        padding:20px;
+        }
+        button{
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 15px;
+            cursor: pointer;
+background-image:linear-gradient(to right, #FFF, #222);
+        }
+        
+        button:hover{
+background-image: linear-gradient(to right, #fff, #232 );
+        }
+        img{
+            border-radius: 15%;
+            box-shadow: 0 0 10px rgba(255,255,255,0.9);
+        }
+        #capturedImage-container {
+            max-width: 180px;
+            max-height:230px;
+            overflow: hidden;
+        }
+        #captured-image {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            background-color: red;
+        }
+        a{
+            text-decoration: none;
+            color: #fff;
+            background-color:
+            padding:10px 20px;
+            border-radius: 10px;
+            font-size:16px;
+            margin:10px 0;
+        }
+        a:hover{
+            background: #9e97b588;
+        }
+        footer{
+            background:#47445188;
+            width: 100vw;
+            height: 7vh;
+            text-align: ;
+            margin: top:70px;
+           
+            
+        }
+    </style>
+</head>
+<body>
+    <header class="header-section" > 
+        <p style="margin-left: 110px; font-size: 24px; margin-bottom:30px; color: white; padding-bottom:0px; text-shadow:56px">web photo</p>
+       
+     <div class="menu-sign-in-container">
+    <div class="bar-container" onclick="MyFunction(this)">
+      
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+     <div class="sign-in">   <a href="#sign-in" style="float: right; margin-right: 10px; text-decoration:none; color: white;  margin-bottom: 200px; font-size: 18px">sign-in
+ <input type="image" src="default.jpeg" alt="" height="21px" width:"18px" style=" border-radius:50px; Margin-top: 4px"></a></div>
+   
+  
+     
+    
+    <div class="sidenav" id="sidenav">
+        
+        <ul>
+     <li><a href="#home">Home</a></li>
+     <li><a href="#contact">contact</a></li>
+     <li><a href="#About">About</a></li>
+     </ul>
+     </div>  
+   </div>
+ </header>
+  
+      <br><br> <br> <br>
+      
+      <br><br>
+      <center> 
+      <h4><i>Take a shot</i></h4>
+  <video id="video" height="240px" width="180px"></video>
+  <br><br><br>
+  <button id="start-camera"> start camera</button> <br><br>
+    <button id="take-photo"> Take photo</button><br> <div id="capturedImage-container">
+    <img id="captured-image" width="" height="" alt=""></img></div><br>  <br>
+ <input type="color" id="colorpicker" value="#ffffff">
+    <a id="download-link" href="#" download="captured-image.jpg"> Save photo</a>
+    
+    
+    
+ 
+    <br>
+    <footer>
+        <p style="color: white; margin-top: 10px ; padding-bottom: 20px"> <i>  &copy Taiwo David 2024 </i></p>
+         </footer>
+    </center>
+        <script>
+const video =
+document.getElementById('video');
+const startCameraBtn = document.getElementById('start-camera'); 
+const takePhotoBtn  = document.getElementById('take-photo');
+const capturedImage =  document.getElementById('captured-image');
+const downloadLink= document.getElementById('download-link');
+const colorPicker = document.getElementById('colorpicker');
+ 
+startCameraBtn.addEventListener('click', async()=>
+    {
+    
+try{
+    const stream = await navigator.mediaDevices.getUserMedia({video:true});
+    video.srcObject = stream;
+    video.play();
+    } catch (error) {
+    console.error('Error accessing camera:', error);
+   }
+});
+   
+takePhotoBtn.addEventListener('click',
+    ()=>{
+    const canvas = document.createElement('canvas');
+    canvas.width = video.videoWidth;
+    canvas.height = video.videoHeight;
+    const ctx = canvas.getContext('2d');
+    ctx.fillStyle=colorPicker.value;
+    ctx.fillRect(0,0,canvas.width, canvas.height);
+   ctx.drawImage(video,0,0);
+    const dataURL = canvas.toDataURL('image/jpeg');
+    capturedImage.src = dataURL;
+    downloadLink.href= dataURL;
+    downloadLink.download='captured-image.jpg'
+    });    
+        
+    </script>
+</body>
+</html>
