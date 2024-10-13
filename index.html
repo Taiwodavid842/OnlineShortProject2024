@@ -22,10 +22,11 @@ background-image:linear-gradient(to bottom, #3a3d41, #222);
        
         }
         .bar1, .bar2, .bar3{
-            width:60px;
-            height:10px;
+            width:40px;
+            height:5px;
             background: white;
-            margin-left: 20px ;
+            margin-top:10px;
+            margin-left: 25px ;
             margin-bottom: 2px;
             transition: 0.4s;
             padding : ;
@@ -289,9 +290,11 @@ background-image: linear-gradient(to right, #fff, #232 );
                 max-height: 150px;
             }
             footer{
-                height:vh;
-                margin-top:px;
-                over-flow: hidden;
+            position: absolute;
+            bottom: 0;
+            width: 100%
+              
+              
             }
         }
         
@@ -303,7 +306,7 @@ background-image: linear-gradient(to right, #fff, #232 );
 </head> 
 <body>
     <header class="header-section">  
-       <h1 class="webText" style="margin-left: px; font-size: 60px; margin-bottom:30px; color: white; padding-bottom:0px; text-align:center; margin:auto">   web photo </h1>
+       <h1 class="webText" style="margin-left: 200px; font-size: 60px; margin-bottom:30px; color: white; padding-bottom:0px; text-align:center; margin:auto">   web photo </h1>
        
      <div class="menu-sign-in-container">
     <div class="bar-container" onclick="MyFunction(this)">
@@ -312,8 +315,8 @@ background-image: linear-gradient(to right, #fff, #232 );
         <div class="bar2"></div>
         <div class="bar3"></div>
       </div>
-     <div class="sign-in">   <a href="#sign-in" style="float: right; margin-right: 50px; text-decoration:none; color: white;  margin-bottom: 0px; font-size: 30px; margin-top: 0px; position: top">sign-in
- <input type="image" src="default.jpeg" alt="" height="53px" width:"50px" style=" border-radius:50px; Margin-top: 0px"></a></div>
+     <div class="sign-in">   <a href="#sign-in" style="float: right; margin-right: px; text-decoration:none; color: white;  margin-bottom: 0px; font-size: 35px; margin-top: 0px; position: top">sign-in
+ <input type="image" src="default.jpeg" alt="" height="33px" width:"30px" style=" border-radius:50px; Margin-top: 0px"></a></div>
    
   
      
@@ -329,23 +332,24 @@ background-image: linear-gradient(to right, #fff, #232 );
    </div>
  </header>
   
-      <br><br> <br> <br>
+    
       
-      <br><br>
+      
          <br><br> <br> <br>
       
       <br><br>
       <br><br> <br> <br>
       
-      <br><br>
-         <br><br> <br> <br>
+     
+         
       
-      <br><br>
+     
    
    
    
-      <center> 
-      <h4 style="font-size: 35px; color: white"><i>Take a shot</i></h4>
+     <center>
+         
+      <h4 style="font-size: 55px; color: white"><i>Take a shot</i></h4>
       <br><br <br><br> <br><br>
   <video id="video" height="100%" width="100%"></video>
   <br><br><br><br><br> <br> <br>
@@ -353,7 +357,7 @@ background-image: linear-gradient(to right, #fff, #232 );
     <button id="take-photo" style="font-size: 50px"> Take photo</button><br><br> <br><br><br><br><div id="capturedImage-container">
     <img id="captured-image" width="100%" height="100%" alt=""></img></div><br>  <br><br><br> <br> <br><br><br>
  <input type="color" id="colorpicker" value="#FF0000" style="display:none">
-    <a id="download-link" href="#" download="captured-image.jpg"  style="font-size: 50px";   > Save photo</a>
+    <a id="download-link" href="#" download="captured-image.jpg"  style="font-size: 70px";   > Save photo</a>
     
    
     <br><br><br>
